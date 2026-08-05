@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Resume</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#f2f2f2;
+            display:flex;
+            justify-content:center;
+            padding:30px;
+        }
+
+        .resume{
+            width:900px;
+            min-height:1200px;
+            background:#fff;
+            display:flex;
+            overflow:hidden;
+            border-radius:12px;
+            box-shadow:0 10px 30px rgba(0,0,0,.15);
+        }
+
+        /* LEFT SIDEBAR */
+        .sidebar{
+            width:33%;
+            background:#163552;
+            color:#fff;
+            padding:30px 24px;
+        }
+
+        .profile-image{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        .profile-image img{
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            border:4px solid rgba(255,255,255,.8);
+            object-fit:cover;
+        }
+
+        .section{
+            margin-bottom:30px;
+        }
+
+        .section-title{
+            font-size:15px;
+            font-weight:700;
+            letter-spacing:2px;
+            margin-bottom:15px;
+            text-transform:uppercase;
+            position:relative;
+            padding-bottom:8px;
+        }
+
+        .section-title::after{
+            content:"";
+            position:absolute;
+            left:0;
+            bottom:0;
+            width:100%;
+            height:1px;
+            background:rgba(255,255,255,.4);
+        }
+
+        .contact-item{
+            display:flex;
+            gap:10px;
+            align-items:flex-start;
+            margin-bottom:12px;
+            font-size:13px;
+        }
+
+        .contact-item i{
+            width:18px;
+            margin-top:3px;
+        }
+
+        .education-item,
+        .skill-item,
+        .language-item{
+            margin-bottom:12px;
+            font-size:13px;
+        }
+
+        .education-item h4{
+            font-size:14px;
+            margin-top:5px;
+        }
+
+        .education-item p{
+            opacity:.85;
+            margin-top:4px;
+        }
+
+        ul.clean-list{
+            list-style:none;
+        }
+
+        ul.clean-list li{
+            position:relative;
+            padding-left:15px;
+            margin-bottom:8px;
+            font-size:13px;
+        }
+
+        ul.clean-list li::before{
+            content:"•";
+            position:absolute;
+            left:0;
+        }
+
+        /* RIGHT CONTENT */
+        .content{
+            width:67%;
+            padding:40px 35px;
+        }
+
+        .header{
+            margin-bottom:35px;
+        }
+
+        .name{
+            font-size:42px;
+            font-weight:700;
+            color:#444;
+            line-height:1;
+        }
+
+        .name span{
+            font-weight:400;
+            color:#304c67;
+        }
+
+        .job-title{
+            margin-top:8px;
+            font-size:18px;
+            color:#666;
+            text-transform:uppercase;
+        }
+
+        .name-line{
+            width:60px;
+            height:4px;
+            background:#1e4465;
+            margin-top:15px;
+        }
+
+        .content-section{
+            margin-bottom:30px;
+        }
+
+        .content-title{
+            color:#284764;
+            font-size:18px;
+            font-weight:700;
+            text-transform:uppercase;
+            letter-spacing:2px;
+            margin-bottom:15px;
+        }
+
+        .profile-text{
+            color:#666;
+            font-size:13px;
+            line-height:1.8;
+            text-align:justify;
+        }
+
+        .experience-item{
+            margin-bottom:25px;
+        }
+
+        .exp-header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:5px;
+        }
+
+        .company{
+            font-weight:600;
+            color:#444;
+        }
+
+        .duration{
+            font-size:12px;
+            color:#666;
+        }
+
+        .position{
+            font-size:14px;
+            color:#666;
+            margin-bottom:8px;
+        }
+
+        .experience-item ul{
+            margin-left:18px;
+            color:#555;
+            font-size:13px;
+            line-height:1.8;
+        }
+
+        .references{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+        }
+
+        .reference-card{
+            border-top:1px solid #d8d8d8;
+            padding-top:10px;
+        }
+
+        .reference-card h4{
+            color:#444;
+            margin-bottom:5px;
+        }
+
+        .reference-card p{
+            font-size:13px;
+            color:#666;
+            margin-bottom:4px;
+        }
+
+        @media(max-width:900px){
+
+            .resume{
+                flex-direction:column;
+                width:100%;
+            }
+
+            .sidebar,
+            .content{
+                width:100%;
+            }
+
+            .references{
+                grid-template-columns:1fr;
+            }
+
+            .name{
+                font-size:34px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="profile-image">
+            <!-- IMAGE PLACEHOLDER -->
+            <img src="" alt="Profile Photo">
+        </div>
+
+        <section class="section">
+            <h3 class="section-title">Contact</h3>
+
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+123-456-7890</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>hello@example.com</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-location-dot"></i>
+                <span>123 Anywhere St., Any City</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <span>www.yourwebsite.com</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">Education</h3>
+
+            <div class="education-item">
+                <strong>2029 - 2030</strong>
+                <h4>Wardiere University</h4>
+                <p>Master of Business Management</p>
+            </div>
+
+            <div class="education-item">
+                <strong>2025 - 2029</strong>
+                <h4>Wardiere University</h4>
+                <p>Bachelor of Business</p>
+                <p>GPA: 3.8 / 4.0</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">Skills</h3>
+
+            <ul class="clean-list">
+                <li>Project Management</li>
+                <li>Public Relations</li>
+                <li>Teamwork</li>
+                <li>Time Management</li>
+                <li>Leadership</li>
+                <li>Effective Communication</li>
+                <li>Critical Thinking</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">Languages</h3>
+
+            <ul class="clean-list">
+                <li>English (Fluent)</li>
+                <li>French (Fluent)</li>
+                <li>German (Basic)</li>
+                <li>Spanish (Intermediate)</li>
+            </ul>
+        </section>
+
+    </aside>
+
+    <!-- RIGHT CONTENT -->
+    <main class="content">
+
+        <header class="header">
+            <h1 class="name">
+                RICHARD <span>SANCHEZ</span>
+            </h1>
+
+            <div class="job-title">
+                Marketing Manager
+            </div>
+
+            <div class="name-line"></div>
+        </header>
+
+        <section class="content-section">
+            <h2 class="content-title">Profile</h2>
+
+            <p class="profile-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2 class="content-title">Work Experience</h2>
+
+            <div class="experience-item">
+
+                <div class="exp-header">
+                    <div class="company">Borcelle Studio</div>
+                    <div class="duration">2030 - Present</div>
+                </div>
+
+                <div class="position">
+                    Marketing Manager & Specialist
+                </div>
+
+                <ul>
+                    <li>Develop and execute marketing strategies.</li>
+                    <li>Lead and mentor a high-performing team.</li>
+                    <li>Maintain brand consistency across channels.</li>
+                </ul>
+
+            </div>
+
+            <div class="experience-item">
+
+                <div class="exp-header">
+                    <div class="company">Fauget Studio</div>
+                    <div class="duration">2025 - 2029</div>
+                </div>
+
+                <div class="position">
+                    Marketing Manager & Specialist
+                </div>
+
+                <ul>
+                    <li>Create and manage marketing budgets.</li>
+                    <li>Monitor brand consistency.</li>
+                    <li>Oversee market research activities.</li>
+                </ul>
+
+            </div>
+
+            <div class="experience-item">
+
+                <div class="exp-header">
+                    <div class="company">Studio Shodwe</div>
+                    <div class="duration">2024 - 2025</div>
+                </div>
+
+                <div class="position">
+                    Marketing Manager & Specialist
+                </div>
+
+                <ul>
+                    <li>Develop and maintain client relationships.</li>
+                    <li>Assist marketing campaigns.</li>
+                    <li>Monitor all brand materials.</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section class="content-section">
+
+            <h2 class="content-title">Reference</h2>
+
+            <div class="references">
+
+                <div class="reference-card">
+                    <h4>Estelle Darcy</h4>
+                    <p>Wardiere Inc. / CTO</p>
+                    <p>Phone: 123-456-7890</p>
+                    <p>Email: hello@example.com</p>
+                </div>
+
+                <div class="reference-card">
+                    <h4>Harper Richard</h4>
+                    <p>Wardiere Inc. / CEO</p>
+                    <p>Phone: 123-456-7890</p>
+                    <p>Email: hello@example.com</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
