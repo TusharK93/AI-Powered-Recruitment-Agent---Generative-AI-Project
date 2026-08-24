@@ -7,7 +7,7 @@ from prompts.prompt_reader import get_skills_prompt
 from dotenv import load_dotenv
 load_dotenv()
 from langchain_google_genai import GoogleGenerativeAI
-llm = GoogleGenerativeAI('gemini-2.5-flash')
+llm = GoogleGenerativeAI('gemini-3.6-flash')
 class Confidence(str,Enum):
     HIGH   = "HIGH"
     MEDIUM = "MEDIUM"

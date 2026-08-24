@@ -8,7 +8,7 @@ from prompts.prompt_reader import get_format_prompt
 from dotenv import load_dotenv
 load_dotenv()
 from langchain_google_genai import ChatGoogleGenerativeAI
-llm = ChatGoogleGenerativeAI( model="gemini-2.5-flash",
+llm = ChatGoogleGenerativeAI( model="gemini-3.6-flash",
     temperature=0)
 
 def format_resume_chain(resume):
