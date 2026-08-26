@@ -6,8 +6,17 @@ from langchain_core.prompts import ChatPromptTemplate
 from prompts.prompt_reader import get_skills_prompt
 from dotenv import load_dotenv
 load_dotenv()
-from langchain_google_genai import GoogleGenerativeAI
-llm = GoogleGenerativeAI('gemini-3.6-flash')
+from dotenv import load_dotenv
+from langchain_google_genai import ChatGoogleGenerativeAI
+import os
+
+load_dotenv()
+
+llm = ChatGoogleGenerativeAI(
+    model="gemini-3.6-flash",
+    google_api_key=os.getenv("GOOGLE_API_KEY"),
+    temperature=0
+)
 class Confidence(str,Enum):
     HIGH   = "HIGH"
     MEDIUM = "MEDIUM"

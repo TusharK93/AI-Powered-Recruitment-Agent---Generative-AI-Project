@@ -4,7 +4,7 @@ from services.pdf_parser import extract_pdf_text
 from services.resume_extractor import clean_resume_text
 
 from core.llm import get_llm
-
+from agents.interviewer_agent import InterviewerAgent
 from agents.ats_agent import ATSAgent
 from agents.interviewer_agent import InterviewerAgent
 from agents.evaluator_agent import EvaluatorAgent

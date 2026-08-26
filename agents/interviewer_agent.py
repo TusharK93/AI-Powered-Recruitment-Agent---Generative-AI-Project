@@ -1,4 +1,7 @@
 from chains.interview_chain import generate_question_chain
+from langchain_google_genai import ChatGoogleGenerativeAI
+
+
 
 class InterviewerAgent:
     def __init__(self, llm):
