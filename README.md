@@ -154,3 +154,6 @@ The AI Recruitment Agent intelligently evaluates candidate resumes against job r
 Generative AI is transforming recruitment by enabling intelligent automation, contextual candidate evaluation, and AI-assisted decision-making. This project demonstrates how **Large Language Models**, **LangChain**, and **Retrieval-Augmented Generation (RAG)** can be combined to build a scalable recruitment assistant that improves hiring efficiency while reducing manual effort.
 
 This repository showcases expertise in **Generative AI, LLM Application Development, LangChain, Prompt Engineering, Retrieval-Augmented Generation (RAG), Python, and AI Deployment**, making it an excellent portfolio project for **Generative AI Engineer, AI Engineer, Machine Learning Engineer, NLP Engineer, LLM Engineer, and Data Scientist** roles.
+<p align="center">
+  <img src="genai.jpg" alt="Financial RAG Assistant end-to-end pipeline" width="100%">
+</p>
